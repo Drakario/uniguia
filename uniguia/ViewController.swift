@@ -10,8 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imagem: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagem.image = UIImage(named: "unifor")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
