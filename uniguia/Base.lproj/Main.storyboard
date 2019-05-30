@@ -21,10 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Fb-cr-AxY">
-                                <rect key="frame" x="67" y="80" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAW-Fn-jka">
                                 <rect key="frame" x="16" y="617" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -36,13 +32,27 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1R-AQ-uEL">
                                 <rect key="frame" x="300" y="617" width="59" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Vamos"/>
+                                <state key="normal" title="Iniciar"/>
                                 <connections>
                                     <segue destination="b3U-M2-77g" kind="show" id="ahH-rD-kKb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEM-VINDO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9F-3t-OnF">
+                                <rect key="frame" x="140.5" y="323" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Fb-cr-AxY">
+                                <rect key="frame" x="48" y="28" width="279" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o9F-3t-OnF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="khA-oR-U73"/>
+                            <constraint firstItem="o9F-3t-OnF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qbp-Zm-xfC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imagem" destination="0Fb-cr-AxY" id="4RZ-gY-eTA"/>
@@ -90,19 +100,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhM-mZ-3E6">
-                                <rect key="frame" x="47" y="205" width="280" height="281"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dR-oa-dDy">
-                                <rect key="frame" x="313" y="574" width="47" height="30"/>
+                                <rect key="frame" x="313" y="589" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Vamos"/>
                                 <connections>
                                     <segue destination="b3U-M2-77g" kind="show" id="6qV-pG-OrK"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhM-mZ-3E6">
+                                <rect key="frame" x="47" y="193" width="280" height="281"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bhM-mZ-3E6" firstAttribute="centerY" secondItem="Cqt-9a-ywW" secondAttribute="centerY" id="9ky-cv-xBp"/>
                             <constraint firstItem="bhM-mZ-3E6" firstAttribute="centerX" secondItem="Cqt-9a-ywW" secondAttribute="centerX" id="lk9-Uk-65f"/>
@@ -260,6 +270,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6qV-pG-OrK"/>
+        <segue reference="ahH-rD-kKb"/>
     </inferredMetricsTieBreakers>
 </document>

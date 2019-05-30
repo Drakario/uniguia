@@ -12,7 +12,7 @@ class tutorialViewController: UIViewController, UIPageViewControllerDataSource {
     
     var pageViewController: UIPageViewController?
     
-    let contentImages = ["naturepic1", "naturepic2", "naturepic3", "naturepic4"]
+    let contentImages = ["naturepic1", "naturepic1", "naturepic1", "naturepic1"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +48,8 @@ class tutorialViewController: UIViewController, UIPageViewControllerDataSource {
     func setupPageControl(){
         let appearence = UIPageControl.appearance()
         appearence.pageIndicatorTintColor = UIColor.gray
-        appearence.currentPageIndicatorTintColor = UIColor.white
-        appearence.backgroundColor = UIColor.darkGray
+        appearence.currentPageIndicatorTintColor = UIColor.blue
+        appearence.backgroundColor = UIColor.white
         
     }
     
