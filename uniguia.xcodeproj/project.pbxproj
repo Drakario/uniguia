@@ -17,6 +17,8 @@
 		3F35E5F6229F0581002BC0F4 /* putDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35E5F5229F0581002BC0F4 /* putDataViewController.swift */; };
 		3F35E5F9229F07C6002BC0F4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F35E5F8229F07C6002BC0F4 /* MapKit.framework */; };
 		3F35E5FB229F08DC002BC0F4 /* navegationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35E5FA229F08DC002BC0F4 /* navegationViewController.swift */; };
+		3F35E5FD22A04829002BC0F4 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35E5FC22A04829002BC0F4 /* ItemViewController.swift */; };
+		3F35E5FF22A0497E002BC0F4 /* tutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35E5FE22A0497E002BC0F4 /* tutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3F35E5F5229F0581002BC0F4 /* putDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = putDataViewController.swift; sourceTree = "<group>"; };
 		3F35E5F8229F07C6002BC0F4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3F35E5FA229F08DC002BC0F4 /* navegationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navegationViewController.swift; sourceTree = "<group>"; };
+		3F35E5FC22A04829002BC0F4 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		3F35E5FE22A0497E002BC0F4 /* tutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutorialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				3F35E5C9229DAC22002BC0F4 /* ViewController.swift */,
 				3F35E5F5229F0581002BC0F4 /* putDataViewController.swift */,
 				3F35E5FA229F08DC002BC0F4 /* navegationViewController.swift */,
+				3F35E5FC22A04829002BC0F4 /* ItemViewController.swift */,
+				3F35E5FE22A0497E002BC0F4 /* tutorialViewController.swift */,
 				3F35E5CB229DAC22002BC0F4 /* Main.storyboard */,
 				3F35E5CE229DAC22002BC0F4 /* Assets.xcassets */,
 				3F35E5D0229DAC22002BC0F4 /* LaunchScreen.storyboard */,
@@ -279,6 +285,8 @@
 			files = (
 				3F35E5FB229F08DC002BC0F4 /* navegationViewController.swift in Sources */,
 				3F35E5CA229DAC22002BC0F4 /* ViewController.swift in Sources */,
+				3F35E5FF22A0497E002BC0F4 /* tutorialViewController.swift in Sources */,
+				3F35E5FD22A04829002BC0F4 /* ItemViewController.swift in Sources */,
 				3F35E5F6229F0581002BC0F4 /* putDataViewController.swift in Sources */,
 				3F35E5C8229DAC22002BC0F4 /* AppDelegate.swift in Sources */,
 			);

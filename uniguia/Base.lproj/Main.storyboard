@@ -29,6 +29,9 @@
                                 <rect key="frame" x="16" y="617" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tutorial"/>
+                                <connections>
+                                    <segue destination="Vo7-Qj-gpO" kind="show" id="HvS-nz-tlP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1R-AQ-uEL">
                                 <rect key="frame" x="300" y="617" width="59" height="30"/>
@@ -48,6 +51,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="Brd-ge-jDJ">
+            <objects>
+                <viewController id="Vo7-Qj-gpO" customClass="tutorialViewController" customModule="uniguia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ld-y4-xPG"/>
+                        <viewControllerLayoutGuide type="bottom" id="g7N-Cl-krR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qw5-7L-FYS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUs-vu-f6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="-244"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Hou-Yr-dCG">
+            <objects>
+                <pageViewController storyboardIdentifier="PageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="K2y-w1-zgr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ji-Df-v4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2124" y="-244"/>
+        </scene>
+        <!--Item View Controller-->
+        <scene sceneID="w61-6W-dg9">
+            <objects>
+                <viewController storyboardIdentifier="ItemController" id="2g5-CR-MUx" customClass="ItemViewController" customModule="uniguia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1C9-Dv-OOg"/>
+                        <viewControllerLayoutGuide type="bottom" id="zDw-ob-G22"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cqt-9a-ywW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhM-mZ-3E6">
+                                <rect key="frame" x="47" y="205" width="280" height="281"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dR-oa-dDy">
+                                <rect key="frame" x="313" y="574" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Vamos"/>
+                                <connections>
+                                    <segue destination="b3U-M2-77g" kind="show" id="6qV-pG-OrK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bhM-mZ-3E6" firstAttribute="centerY" secondItem="Cqt-9a-ywW" secondAttribute="centerY" id="9ky-cv-xBp"/>
+                            <constraint firstItem="bhM-mZ-3E6" firstAttribute="centerX" secondItem="Cqt-9a-ywW" secondAttribute="centerX" id="lk9-Uk-65f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="bhM-mZ-3E6" id="rf5-zr-Edv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6W-sg-CcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2898.4000000000001" y="-244.22788605697153"/>
         </scene>
         <!--Put Data View Controller-->
         <scene sceneID="Kj6-l7-VY1">
@@ -193,6 +260,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="z04-vS-5Cf"/>
+        <segue reference="6qV-pG-OrK"/>
     </inferredMetricsTieBreakers>
 </document>
