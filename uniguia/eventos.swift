@@ -13,7 +13,7 @@ import Foundation
         let horario: String
         
         
-        init(nome: String, horario: String) {
+        init(nome: String, horario: String = "") {
             self.nome = nome
             self.horario = horario
     
@@ -41,7 +41,7 @@ import Foundation
         
         static func getEventos (callback: @escaping ((Evento) -> Void)) {
             
-            let endpoint: String = "https://rafael23.mybluemix.net/estacionamento/listar"
+            let endpoint: String = "https://uniguia.mybluemix.net/eventos"
             
             guard let url = URL(string: endpoint) else {
                 print("Erroooo: Cannot create URL")
@@ -64,12 +64,12 @@ import Foundation
                     do {
                         if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String: AnyObject]] {
                             
-                            let evento = Evento(json: json[0])
+                            let evento = Evento(nome: json[0]["title"] as! String)
                             
                             let nomeEvento = evento.nome
                             let nomeHorario = evento.horario
                             
-                            print("\(nomeEvento) realizado em \(evento.horario).")
+                            print("\(nomeEvento) realizado em \(nomeHorario).")
                             
                             callback(evento)
                             
