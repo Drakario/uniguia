@@ -35,3 +35,56 @@ import Foundation
         }
         
     }
+    
+    
+    class EventosDAO {
+        
+        static func getEventos (callback: @escaping ((Evento) -> Void)) {
+            
+            let endpoint: String = "https://rafael23.mybluemix.net/estacionamento/listar"
+            
+            guard let url = URL(string: endpoint) else {
+                print("Erroooo: Cannot create URL")
+                return
+            }
+            
+            let urlRequest = URLRequest(url: url)
+            
+            let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+                
+                if error != nil {
+                    print("Error = \(String(describing: error))")
+                    return
+                }
+                
+                let responseString = String(data: data!, encoding: String.Encoding.utf8)
+                print("responseString = \(String(describing: responseString))")
+                
+                DispatchQueue.main.async() {
+                    do {
+                        if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String: AnyObject]] {
+                            
+                            let evento = Evento(json: json[0])
+                            
+                            let nomeEvento = evento.nome
+                            let nomeHorario = evento.horario
+                            
+                            print("\(nomeEvento) realizado em \(evento.horario).")
+                            
+                            callback(evento)
+                            
+                        }else {
+                            
+                            print("fudeuuuu")
+                        }
+                    } catch let error as NSError {
+                        print("Error = \(error.localizedDescription)")
+                    }
+                }
+                
+                
+            })
+            
+            task.resume()
+        }
+    }
