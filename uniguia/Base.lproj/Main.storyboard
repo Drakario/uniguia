@@ -241,7 +241,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventoIdentifier" rowHeight="169" id="LOb-ov-AGW" customClass="EventosTableViewCell" customModule="uniguia" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="169"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LOb-ov-AGW" id="BWg-SH-IK0">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LOb-ov-AGW" id="BWg-SH-IK0" customClass="EventosTableViewCell" customModule="uniguia" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="168.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -279,10 +279,6 @@
                                         <constraint firstItem="5ts-jG-cgE" firstAttribute="centerY" secondItem="BWg-SH-IK0" secondAttribute="centerY" id="cNZ-rT-PQJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="horarioLabel" destination="R6n-o2-tOf" id="3QS-IM-SQN"/>
-                                    <outlet property="nomeLabel" destination="Y9Y-jT-gDH" id="yxG-9m-39h"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

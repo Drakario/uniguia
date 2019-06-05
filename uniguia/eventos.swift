@@ -21,7 +21,8 @@ import Foundation
         
     }
     
- 
+    
+    /*
     class EventoDAO {
         
         static func getList() -> [Evento] {
@@ -35,13 +36,14 @@ import Foundation
         }
         
     }
+     */
     
     
-    class EventosDAO {
+    class EventoDAO {
         
         static func getEventos (callback: @escaping ((Evento) -> Void)) {
             
-            let endpoint: String = "https://uniguia.mybluemix.net/eventos"
+            let endpoint: String = "https://uniguia.mybluemix.net/events"
             
             guard let url = URL(string: endpoint) else {
                 print("Erroooo: Cannot create URL")

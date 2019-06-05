@@ -9,13 +9,14 @@
 import UIKit
 
 class EventosTableViewController: UITableViewController {
-    var eventos = [Evento]()
+    //var eventos = [Evento]()
+    var eventos: [Evento]?
 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         eventos = EventoDAO.getList()
+         //eventos = EventoDAO.getList()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +33,8 @@ class EventosTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return eventos.count    }
+        return eventos!.count
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      
@@ -40,10 +42,10 @@ class EventosTableViewController: UITableViewController {
        
         if let eventoCell = cell as? EventosTableViewCell {
            
-            let evento = eventos[indexPath.row]
+            let evento = eventos?[indexPath.row]
             
-            eventoCell.nomeLabel.text = evento.nome
-            eventoCell.horarioLabel.text = evento.horario
+            eventoCell.nomeLabel.text = evento?.nome
+            eventoCell.horarioLabel.text = evento?.horario
           
             return eventoCell
         }
