@@ -304,7 +304,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L8P-rI-Cy6">
-                                <rect key="frame" x="2" y="8" width="375" height="659"/>
+                                <rect key="frame" x="2" y="8" width="375" height="403"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psa-3c-SAe">
@@ -315,11 +315,33 @@
                                     <segue destination="zXJ-OY-4sn" kind="show" id="x9Z-6P-eKe"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seta" translatesAutoresizingMaskIntoConstraints="NO" id="4sK-s3-LYU">
+                                <rect key="frame" x="127" y="465" width="121" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.51304608510799188" green="0.72654249845204588" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIL-AM-nsZ">
+                                <rect key="frame" x="161" y="582" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Rotacao"/>
+                                <connections>
+                                    <action selector="btnRotacao:" destination="CYg-la-FjP" eventType="touchUpInside" id="twQ-Er-6iM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfJ-ES-g0p">
+                                <rect key="frame" x="273" y="517" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="label" destination="bfJ-ES-g0p" id="Fg1-ij-2gp"/>
                         <outlet property="mapView" destination="L8P-rI-Cy6" id="uPD-4L-Xp5"/>
+                        <outlet property="seta" destination="4sK-s3-LYU" id="Aum-qb-3xU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbe-Xp-eWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,8 +416,11 @@
             <point key="canvasLocation" x="3168.8000000000002" y="597.75112443778119"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="seta" width="640" height="640"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="z04-vS-5Cf"/>
         <segue reference="Yzg-s5-vvO"/>
+        <segue reference="6qV-pG-OrK"/>
     </inferredMetricsTieBreakers>
 </document>

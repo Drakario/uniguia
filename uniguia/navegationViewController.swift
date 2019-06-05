@@ -10,9 +10,26 @@ import UIKit
 import MapKit
 import CoreLocation
 
+
 class navegationViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var userLocation = CLLocation()
+    
+    @IBOutlet weak var seta: UIImageView!
+    
+    @IBOutlet weak var label: UILabel!
+    
+
+    /*
+    @IBAction func btnRotacao(_ sender: Any) {
+        
+        UIView.animate(withDuration: 1) {
+            self.seta.transform = self.seta.transform.rotated(by: CGFloat(Double.pi/2))
+        }
+        print("clicou")
+    
+    }
+    */
     
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
@@ -20,7 +37,18 @@ class navegationViewController: UIViewController, CLLocationManagerDelegate {
         mapView.showsUserLocation = true
         setupLocationManager()
         addGesture()
+        rotacao(Double.pi/2)
+        
     }
+    
+    func rotacao(){
+        
+        UIView.animate(withDuration: 3) {
+            self.seta.transform = self.seta.transform.rotated(by: CGFloat(Double.pi/2))
+        }
+    }
+    
+    
     func setupLocationManager () {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
